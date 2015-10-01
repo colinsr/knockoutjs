@@ -2,19 +2,22 @@
     <html>
         <head>
             <title>Setup Example</title>
+            <script src="jquery.js"></script>
             <script src="knockout.js"></script>
+            <script>
+                $(function () {
+                    var myViewModel = {
+                        course: "knockout",
+                        author: "Colin Detwiller"
+                    };
+
+                    ko.applyBindings(myViewModel);
+                });
+            </script>
         </head>
         <body>
             <div>
                 The course <u><span data-bind="text: course"></span></u> will be taught by <b><span data-bind="text: author"></span></b>
             </div>
-            <script>
-                var myViewModel = {
-                    course: "knockout",
-                    author: "Colin Detwiller"
-                };
-
-                ko.applyBindings(myViewModel);
-            </script>
         </body>
     </html>
